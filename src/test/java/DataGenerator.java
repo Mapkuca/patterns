@@ -16,7 +16,7 @@ public class DataGenerator {
     public static LocalDate generateDate() {
         long minDay = LocalDate.now().plusDays(1).toEpochDay();
         long maxDay = LocalDate.now().plusMonths(2).toEpochDay();
-        long someday = ThreadLocalRandom.current().nextLong(maxDay, maxDay);
+        long someday = ThreadLocalRandom.current().nextLong(minDay, maxDay);
         return LocalDate.ofEpochDay(someday);
     }
 
